@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .lab-container {
+    margin-bottom: 20px;
+  }
+  
+  .lab-container label {
+    margin-right: 10px;
+  }
+  
+  .lab-container input[type="text"],
+  .lab-container input[type="password"] {
+    padding: 5px;
+    width: 200px;
+  }
+  
+  .lab-container button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
