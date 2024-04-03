@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Đồng Hồ Đếm Ngược Sinus</title>
+    <style type="text/css">
+        .pixel {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: red;
+        }
+        #countdown {
+            position: fixed;
+            top: 50px;
+            right: 50px;
+            font-size: 30px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="countdown">10 giây</div>
+    <script type="text/javascript">
+        var countdownElement = document.getElementById('countdown');
+        var timeLeft = 10; 
+        var timers = window.setInterval(function() {
+            countdownElement.textContent = timeLeft + ' giây';
+            if(timeLeft === 0) {
+                clearInterval(timers);
+                countdownElement.textContent = 'Hết giờ!';
+            } else {
+                timeLeft--;
+            }
+        }, 1000);
+        var timer= window.setTimeout(drawSine, 10);
+        var x = 0.0;
+        function drawSine() {
+            var y = Math.sin(Math.PI * x++ / 100.0) * 100 + 200;
+            drawPixel(x, y);
+            window.setTimeout("drawSine()",10);
+        }
+        function drawPixel(x, y) {
+            var newdiv = document.createElement("div");
+            newdiv.className = "pixel";
+            newdiv.style.top = y + 'px';
+            newdiv.style.left = x + 'px';
+            document.body.appendChild(newdiv);
+        }
+        window.clearTimeout(timer);
+    </script>
+</body>
+</html>
