@@ -1,0 +1,22 @@
+{
+  "name": "tutorial",
+  "version": "1.0.0",
+  "description": "no ",
+  "main": "app.js",
+  "scripts": {
+    "test": "no"
+  },
+  "repository": {
+    "type": "git",
+    "url": "yes"
+  },
+  "keywords": [
+    "no"
+  ],
+  "author": "no",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrapp": "^0.0.0"
+  },
+  "devDependencies": {}
+}
